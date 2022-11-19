@@ -1,0 +1,1383 @@
+{
+  "contractName": "Client",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "clientCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "clients",
+      "outputs": [
+        {
+          "name": "cin",
+          "type": "uint256"
+        },
+        {
+          "name": "fullName",
+          "type": "string"
+        },
+        {
+          "name": "age",
+          "type": "uint256"
+        },
+        {
+          "name": "state",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_fullName",
+          "type": "string"
+        },
+        {
+          "name": "_age",
+          "type": "uint256"
+        }
+      ],
+      "name": "createClient",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60806040526000805534801561001457600080fd5b506100646040805190810160405280600981526020017f61686d656420616c690000000000000000000000000000000000000000000000815250601a610069640100000000026401000000009004565b6101b2565b600080815480929190600101919050555060806040519081016040528060005481526020018381526020018281526020016001151581525060016000805481526020019081526020016000206000820151816000015560208201518160010190805190602001906100db92919061010d565b506040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055509050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061014e57805160ff191683800117855561017c565b8280016001018555821561017c579182015b8281111561017b578251825591602001919060010190610160565b5b509050610189919061018d565b5090565b6101af91905b808211156101ab576000816000905550600101610193565b5090565b90565b610476806101c16000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680639e3881431461005c578063e541c71e1461012e578063f88af21d14610159575b600080fd5b34801561006857600080fd5b5061012c6004803603604081101561007f57600080fd5b810190808035906020019064010000000081111561009c57600080fd5b8201836020820111156100ae57600080fd5b803590602001918460018302840111640100000000831117156100d057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190505050610226565b005b34801561013a57600080fd5b506101436102ca565b6040518082815260200191505060405180910390f35b34801561016557600080fd5b506101926004803603602081101561017c57600080fd5b81019080803590602001909291905050506102d0565b604051808581526020018060200184815260200183151515158152602001828103825285818151815260200191508051906020019080838360005b838110156101e85780820151818401526020810190506101cd565b50505050905090810190601f1680156102155780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b600080815480929190600101919050555060806040519081016040528060005481526020018381526020018281526020016001151581525060016000805481526020019081526020016000206000820151816000015560208201518160010190805190602001906102989291906103a5565b506040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055509050505050565b60005481565b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103825780601f1061035757610100808354040283529160200191610382565b820191906000526020600020905b81548152906001019060200180831161036557829003601f168201915b5050505050908060020154908060030160009054906101000a900460ff16905084565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103e657805160ff1916838001178555610414565b82800160010185558215610414579182015b828111156104135782518255916020019190600101906103f8565b5b5090506104219190610425565b5090565b61044791905b8082111561044357600081600090555060010161042b565b5090565b9056fea165627a7a723058208ea0fd25099224f770cb3ed1e3d39636db79e6e7073026fbf54195135a5f82a40029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680639e3881431461005c578063e541c71e1461012e578063f88af21d14610159575b600080fd5b34801561006857600080fd5b5061012c6004803603604081101561007f57600080fd5b810190808035906020019064010000000081111561009c57600080fd5b8201836020820111156100ae57600080fd5b803590602001918460018302840111640100000000831117156100d057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190505050610226565b005b34801561013a57600080fd5b506101436102ca565b6040518082815260200191505060405180910390f35b34801561016557600080fd5b506101926004803603602081101561017c57600080fd5b81019080803590602001909291905050506102d0565b604051808581526020018060200184815260200183151515158152602001828103825285818151815260200191508051906020019080838360005b838110156101e85780820151818401526020810190506101cd565b50505050905090810190601f1680156102155780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b600080815480929190600101919050555060806040519081016040528060005481526020018381526020018281526020016001151581525060016000805481526020019081526020016000206000820151816000015560208201518160010190805190602001906102989291906103a5565b506040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055509050505050565b60005481565b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103825780601f1061035757610100808354040283529160200191610382565b820191906000526020600020905b81548152906001019060200180831161036557829003601f168201915b5050505050908060020154908060030160009054906101000a900460ff16905084565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103e657805160ff1916838001178555610414565b82800160010185558215610414579182015b828111156104135782518255916020019190600101906103f8565b5b5090506104219190610425565b5090565b61044791905b8082111561044357600081600090555060010161042b565b5090565b9056fea165627a7a723058208ea0fd25099224f770cb3ed1e3d39636db79e6e7073026fbf54195135a5f82a40029",
+  "sourceMap": "28:915:0:-;;;107:1;81:27;;476:108;8:9:-1;5:2;;;30:1;27;20:12;5:2;476:108:0;548:29;;;;;;;;;;;;;;;;;;;574:2;548:12;;;:29;;;:::i;:::-;28:915;;675:265;837:11;;:13;;;;;;;;;;;;;883:48;;;;;;;;;896:11;;883:48;;;;909:9;883:48;;;;920:4;883:48;;;;926:4;883:48;;;;;860:7;:20;868:11;;860:20;;;;;;;;;;;:71;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;675:265;;:::o;28:915::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "28:915:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;675:265;;8:9:-1;5:2;;;30:1;27;20:12;5:2;675:265:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;675:265:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;675:265:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;675:265:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;675:265:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;675:265:0;;;;;;;;;;;;;;;;;;;;;;;;;;;81:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;81:27:0;;;;;;;;;;;;;;;;;;;;;;;340:45;;8:9:-1;5:2;;;30:1;27;20:12;5:2;340:45:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;340:45:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;340:45:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;675:265;837:11;;:13;;;;;;;;;;;;;883:48;;;;;;;;;896:11;;883:48;;;;909:9;883:48;;;;920:4;883:48;;;;926:4;883:48;;;;;860:7;:20;868:11;;860:20;;;;;;;;;;;:71;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;675:265;;:::o;81:27::-;;;;:::o;340:45::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;28:915::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n \r\ncontract Client {\r\n // uint public taskCount = 0;\r\n  uint public clientCount = 0;\r\n \r\n  struct ClientStruct {\r\n     uint cin;\r\n     string fullName;\r\n     uint age;\r\n     bool state;\r\n  }\r\n\r\n   // store key value pair\r\n   // uint key typpe, Task: type element\r\n   \r\n   //mapping(uint => Task ) public tasks;\r\n   mapping(uint => ClientStruct ) public clients;\r\n\r\n\r\n   // add tasks to list whenever we deploy a SC\r\n   // when entering first time\r\n   constructor() public {\r\n      //createTask(\"check out sitecom\");\r\n      createClient(\"ahmed ali\", 26);\r\n   }\r\n   \r\n   //string: content of the Task\r\n   //function to create a task, id: taskCount\r\n   function createClient(string memory _fullName, uint _age) public {\r\n       //taskCount ++;\r\n       //tasks[taskCount] = Task(taskCount, _content, false);\r\n       clientCount++;\r\n       clients[clientCount] = ClientStruct(clientCount, _fullName, _age, true);\r\n\r\n   }\r\n}",
+  "sourcePath": "C:/Users/fatma/Desktop/projet_blockchain2/contracts/Client.sol",
+  "ast": {
+    "absolutePath": "/C/Users/fatma/Desktop/projet_blockchain2/contracts/Client.sol",
+    "exportedSymbols": {
+      "Client": [
+        49
+      ]
+    },
+    "id": 50,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 49,
+        "linearizedBaseContracts": [
+          49
+        ],
+        "name": "Client",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "clientCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "81:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "81:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "107:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Client.ClientStruct",
+            "id": 13,
+            "members": [
+              {
+                "constant": false,
+                "id": 6,
+                "name": "cin",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "144:8:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "144:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 8,
+                "name": "fullName",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "160:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "160:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "age",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "183:8:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "183:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "199:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "199:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ClientStruct",
+            "nodeType": "StructDefinition",
+            "scope": 49,
+            "src": "116:99:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17,
+            "name": "clients",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "340:45:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ClientStruct_$13_storage_$",
+              "typeString": "mapping(uint256 => struct Client.ClientStruct)"
+            },
+            "typeName": {
+              "id": 16,
+              "keyType": {
+                "id": 14,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "348:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "340:30:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ClientStruct_$13_storage_$",
+                "typeString": "mapping(uint256 => struct Client.ClientStruct)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 15,
+                "name": "ClientStruct",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 13,
+                "src": "356:12:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ClientStruct_$13_storage_ptr",
+                  "typeString": "struct Client.ClientStruct"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 25,
+              "nodeType": "Block",
+              "src": "497:87:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "61686d656420616c69",
+                        "id": 21,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "561:11:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9e4d0782db4230ba0236b33054f9ac7c85e36ac1d01778321a747ba4574b91c0",
+                          "typeString": "literal_string \"ahmed ali\""
+                        },
+                        "value": "ahmed ali"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "3236",
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "574:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_26_by_1",
+                          "typeString": "int_const 26"
+                        },
+                        "value": "26"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_9e4d0782db4230ba0236b33054f9ac7c85e36ac1d01778321a747ba4574b91c0",
+                          "typeString": "literal_string \"ahmed ali\""
+                        },
+                        {
+                          "typeIdentifier": "t_rational_26_by_1",
+                          "typeString": "int_const 26"
+                        }
+                      ],
+                      "id": 20,
+                      "name": "createClient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48,
+                      "src": "548:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                        "typeString": "function (string memory,uint256)"
+                      }
+                    },
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "548:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 24,
+                  "nodeType": "ExpressionStatement",
+                  "src": "548:29:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 26,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "487:2:0"
+            },
+            "returnParameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "497:0:0"
+            },
+            "scope": 49,
+            "src": "476:108:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "740:200:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 34,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "837:13:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 33,
+                      "name": "clientCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "837:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35,
+                  "nodeType": "ExpressionStatement",
+                  "src": "837:13:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "clients",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "860:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ClientStruct_$13_storage_$",
+                          "typeString": "mapping(uint256 => struct Client.ClientStruct storage ref)"
+                        }
+                      },
+                      "id": 38,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 37,
+                        "name": "clientCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "868:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "860:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ClientStruct_$13_storage",
+                        "typeString": "struct Client.ClientStruct storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 40,
+                          "name": "clientCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4,
+                          "src": "896:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 41,
+                          "name": "_fullName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28,
+                          "src": "909:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 42,
+                          "name": "_age",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 30,
+                          "src": "920:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "926:4:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        ],
+                        "id": 39,
+                        "name": "ClientStruct",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "883:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_ClientStruct_$13_storage_ptr_$",
+                          "typeString": "type(struct Client.ClientStruct storage pointer)"
+                        }
+                      },
+                      "id": 44,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "883:48:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ClientStruct_$13_memory",
+                        "typeString": "struct Client.ClientStruct memory"
+                      }
+                    },
+                    "src": "860:71:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ClientStruct_$13_storage",
+                      "typeString": "struct Client.ClientStruct storage ref"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "860:71:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 48,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createClient",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28,
+                  "name": "_fullName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48,
+                  "src": "697:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 27,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "_age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48,
+                  "src": "722:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "722:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:36:0"
+            },
+            "returnParameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "740:0:0"
+            },
+            "scope": 49,
+            "src": "675:265:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 50,
+        "src": "28:915:0"
+      }
+    ],
+    "src": "0:943:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/fatma/Desktop/projet_blockchain2/contracts/Client.sol",
+    "exportedSymbols": {
+      "Client": [
+        49
+      ]
+    },
+    "id": 50,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 49,
+        "linearizedBaseContracts": [
+          49
+        ],
+        "name": "Client",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "clientCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "81:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "81:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "107:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Client.ClientStruct",
+            "id": 13,
+            "members": [
+              {
+                "constant": false,
+                "id": 6,
+                "name": "cin",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "144:8:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 5,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "144:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 8,
+                "name": "fullName",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "160:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "160:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "age",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "183:8:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "183:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "state",
+                "nodeType": "VariableDeclaration",
+                "scope": 13,
+                "src": "199:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "199:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ClientStruct",
+            "nodeType": "StructDefinition",
+            "scope": 49,
+            "src": "116:99:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17,
+            "name": "clients",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "340:45:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ClientStruct_$13_storage_$",
+              "typeString": "mapping(uint256 => struct Client.ClientStruct)"
+            },
+            "typeName": {
+              "id": 16,
+              "keyType": {
+                "id": 14,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "348:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "340:30:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ClientStruct_$13_storage_$",
+                "typeString": "mapping(uint256 => struct Client.ClientStruct)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 15,
+                "name": "ClientStruct",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 13,
+                "src": "356:12:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ClientStruct_$13_storage_ptr",
+                  "typeString": "struct Client.ClientStruct"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 25,
+              "nodeType": "Block",
+              "src": "497:87:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "61686d656420616c69",
+                        "id": 21,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "561:11:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9e4d0782db4230ba0236b33054f9ac7c85e36ac1d01778321a747ba4574b91c0",
+                          "typeString": "literal_string \"ahmed ali\""
+                        },
+                        "value": "ahmed ali"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "3236",
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "574:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_26_by_1",
+                          "typeString": "int_const 26"
+                        },
+                        "value": "26"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_9e4d0782db4230ba0236b33054f9ac7c85e36ac1d01778321a747ba4574b91c0",
+                          "typeString": "literal_string \"ahmed ali\""
+                        },
+                        {
+                          "typeIdentifier": "t_rational_26_by_1",
+                          "typeString": "int_const 26"
+                        }
+                      ],
+                      "id": 20,
+                      "name": "createClient",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48,
+                      "src": "548:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                        "typeString": "function (string memory,uint256)"
+                      }
+                    },
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "548:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 24,
+                  "nodeType": "ExpressionStatement",
+                  "src": "548:29:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 26,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "487:2:0"
+            },
+            "returnParameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "497:0:0"
+            },
+            "scope": 49,
+            "src": "476:108:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "740:200:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 34,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "837:13:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 33,
+                      "name": "clientCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "837:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35,
+                  "nodeType": "ExpressionStatement",
+                  "src": "837:13:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "clients",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "860:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ClientStruct_$13_storage_$",
+                          "typeString": "mapping(uint256 => struct Client.ClientStruct storage ref)"
+                        }
+                      },
+                      "id": 38,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 37,
+                        "name": "clientCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "868:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "860:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ClientStruct_$13_storage",
+                        "typeString": "struct Client.ClientStruct storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 40,
+                          "name": "clientCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4,
+                          "src": "896:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 41,
+                          "name": "_fullName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28,
+                          "src": "909:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 42,
+                          "name": "_age",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 30,
+                          "src": "920:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "926:4:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        ],
+                        "id": 39,
+                        "name": "ClientStruct",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "883:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_ClientStruct_$13_storage_ptr_$",
+                          "typeString": "type(struct Client.ClientStruct storage pointer)"
+                        }
+                      },
+                      "id": 44,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "883:48:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ClientStruct_$13_memory",
+                        "typeString": "struct Client.ClientStruct memory"
+                      }
+                    },
+                    "src": "860:71:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ClientStruct_$13_storage",
+                      "typeString": "struct Client.ClientStruct storage ref"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "860:71:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 48,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createClient",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28,
+                  "name": "_fullName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48,
+                  "src": "697:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 27,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "_age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48,
+                  "src": "722:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "722:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:36:0"
+            },
+            "returnParameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "740:0:0"
+            },
+            "scope": 49,
+            "src": "675:265:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 50,
+        "src": "28:915:0"
+      }
+    ],
+    "src": "0:943:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2022-11-19T23:45:31.054Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
