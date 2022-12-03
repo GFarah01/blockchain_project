@@ -4,22 +4,90 @@
 		"inputs": [
 			{
 				"indexed": false,
+				"internalType": "uint256",
+				"name": "cin",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
 				"internalType": "string",
-				"name": "eventOutput",
+				"name": "fullName",
 				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "statut",
+				"type": "bool"
 			}
 		],
-		"name": "myEventTest",
+		"name": "addingClient",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "cin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "fullName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "statut",
+						"type": "bool"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct SimpleStorage.ClientStruct",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"name": "addingClientReceived",
 		"type": "event"
 	},
 	{
 		"inputs": [],
-		"name": "get",
+		"name": "clientReceived",
 		"outputs": [
 			{
+				"internalType": "uint256",
+				"name": "cin",
+				"type": "uint256"
+			},
+			{
 				"internalType": "string",
-				"name": "",
+				"name": "fullName",
 				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "statut",
+				"type": "bool"
 			}
 		],
 		"stateMutability": "view",
@@ -28,24 +96,156 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "myText",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
-		"name": "set",
+		"name": "clients",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "cin",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "fullName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "statut",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "clientsCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "cin",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "fullName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "statut",
+				"type": "bool"
+			}
+		],
+		"name": "createClient",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"name": "storedData",
+		"name": "getClients",
 		"outputs": [
 			{
-				"internalType": "string",
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "cin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "fullName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "statut",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct SimpleStorage.ClientStruct[]",
 				"name": "",
-				"type": "string"
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "returnClientsCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "returnCurrentClient",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "cin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "fullName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "statut",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct SimpleStorage.ClientStruct",
+				"name": "",
+				"type": "tuple"
 			}
 		],
 		"stateMutability": "view",
