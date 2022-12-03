@@ -6,7 +6,7 @@ import SimpleStorage_abi from './contracts/SimpleStorage_abi.json'
 const SimpleStore = () => {
 
 	// deploy simple storage contract and p aste deployed contract address here. This value is local ganache chain
-	let contractAddress = '0x7231E12e32108B09b6B6f6FD60aA62958454F978';
+	let contractAddress = '0x4d776E557a1098A218be407976B25420d7503F1d';
 
 	const [errorMessage, setErrorMessage] = useState(null);
 	const [defaultAccount, setDefaultAccount] = useState(null);
@@ -67,19 +67,12 @@ const SimpleStore = () => {
 
 	const setHandler = (event) => {
 		event.preventDefault();
-		console.log('sending client name ' + event.target.cin.value + ' to the contract');
-		console.log('sending client name ' + event.target.fullName.value + ' to the contract');
-		console.log('sending client name ' + event.target.email.value + ' to the contract');
-		console.log('sending client name ' + event.target.statut.value + ' to the contract');
-
-		//contract.set(event.target.setText.value);
-
 		contract.createClient( event.target.cin.value, event.target.fullName.value, 
 			                   event.target.email.value, event.target.statut.value);
 	}
 
 	const getCurrentVal = async () => {
-		let val = await contract.returnCurrentClient();
+		let val = await contract.getClients();
 		setCurrentContractVal(val);
 		console.log(val);
 	}
@@ -91,19 +84,18 @@ const SimpleStore = () => {
 			<div>
 				<h3>Address: {defaultAccount}</h3>
 			</div>
-			<form onSubmit={setHandler}>
-				{/* <input id="setText" type="text"/> */}
-			  {/* <button type={"submit"}> Update Contract </button><br/> */}
 
+			<form onSubmit={setHandler}>
 				<button type={"submit"}> Add Client </button><br/>
 				FullName: <input type="text" id="fullName" /><br/>
 				Email: <input type="text" id="email" /><br/>
 				Cin: <input type="number" id="cin" /><br/>
 				Statut: <input type="checkbox" id="statut"/><br/>
 			</form>
+
 			<div>
 			{/* <button onClick={getCurrentVal} style={{marginTop: '5em'}}> Get Current Contract Value </button> */}
-			<button onClick={getCurrentVal} style={{marginTop: '5em'}}> Get Current Client Value </button>
+			<button onClick={getCurrentVal} style={{marginTop: '5em'}}> Get Current Client Value </button>            
 
 			</div>
 			{currentContractVal}
